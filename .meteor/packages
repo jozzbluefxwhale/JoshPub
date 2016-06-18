@@ -20,3 +20,7 @@ angular-templates
 angular
 modules
 twbs:bootstrap
+fortawesome:fontawesome
+accounts-password
+ian:accounts-ui-bootstrap-3
+dotansimha:accounts-ui-angular
