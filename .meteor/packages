@@ -19,8 +19,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 angular-templates
 angular
 modules
-twbs:bootstrap
 fortawesome:fontawesome
 accounts-password
-ian:accounts-ui-bootstrap-3
 dotansimha:accounts-ui-angular

@@ -1,0 +1,48 @@
+ <head>
+        <title>JoshPub</title>
+    </head>
+    <body ng-app="joshpubApp">
+        <div class="wrapper">
+            <div class="w1">
+                <!-- cabecera-->
+                <div id="header">
+                    <span class="line"></span>
+                    <div class="header-holder">
+                        <img src="/img/logo.png" class="logo">
+                        <div class="frame">
+                            <!-- columna 1-->
+                            <div class="col01">
+                                <div class="header-block">
+                                    <a href="#" class="link">+ AGREGAR PRODUCTO</a>
+                                </div>
+                                <div class="search-block">
+                                    <form  method="get">
+                                            <div class="search-frame">
+                                                <input id="search" type="text" placeholder="Vodka, Cervezas, Tequila, Ron, Vinos....." required>
+                                                <input type="submit" title="buscar" value="Buscar">
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col02">
+                                <div class="mini-menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--nav-->
+                <nav id="nav" ng-controller="navbarCtrl as navbar">
+                    <ul class="navigation">
+                        <li ng-class="{ active : isActive('/')}"><a href="/">Inicio</a></li>
+                        <li ng-class="{active :isActive('/busqueda')}"><a href="/busqueda">Busqueda Avanzada</a></li>
+                        <li ng-class="{active :isActive('/rack')}"><a href="/rack">JoshPubRack</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="main">
+            <ng-view></ng-view>
+        </div>
+        <footer id="footer"></footer>
+    </body>

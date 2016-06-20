@@ -18,7 +18,6 @@ input, textarea,keygen, select,button{
     text-shadow: none;
     display: inline-block;
     box-sizing: border-box;
-
 }
 
 a{
@@ -230,16 +229,57 @@ li{
 .navigation li{
     display:inline;
     padding:0 9px 0 16px;
+    text-underline: none;
 }
 .navigation a{
     color:#303030;
 }
-.navigation a:hover{
-    text-decoration:none;
-    color: #5d4037;;
-}
+
 #search{
     margin: 7px 6px 0 0;
 }
+.brown{
+    background-color: red;
+    font-weight: bold;
+}
 
+#main{
+    width: 941px;
+    margin:0 auto;
+    padding:24px 0 30px;
+}
+.threecolumns{
+    width: 100%;
+}
+.twocolumns{
+    float: left;
+    width:601px;
+}
+#content{
+    float: right;
+    width: 401px;
+    background-color: red;
+}
+.aside{
+    float: left;
+    width:161px;
+    background-color: blue;
+}
 
+#sidebar{
+    float: right;
+    width: 301px;
+    margin-top: 3px;
+    background-color: deeppink;
+}
+#footer {
+    position: relative;
+    overflow: hidden;
+    width: 871px;
+    padding: 19px 69px 0 0;
+    font-size: 11px;
+    margin: -92px auto 0;
+    height: 72px;
+    border-top: 1px solid #d6d6d6;
+    background-color: brown;
+}
