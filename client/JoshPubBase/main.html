@@ -1,5 +1,7 @@
- <head>
+
+<head>
         <title>JoshPub</title>
+    <base href="/">
     </head>
     <body ng-app="joshpubApp">
         <div class="wrapper">
@@ -34,15 +36,16 @@
                 <!--nav-->
                 <nav id="nav" ng-controller="navbarCtrl as navbar">
                     <ul class="navigation">
-                        <li ng-class="{ active : isActive('/')}"><a href="/">Inicio</a></li>
+                        <li ng-class="{ active : isActive('/index')}"><a href="/index">Inicio</a></li>
                         <li ng-class="{active :isActive('/busqueda')}"><a href="/busqueda">Busqueda Avanzada</a></li>
                         <li ng-class="{active :isActive('/rack')}"><a href="/rack">JoshPubRack</a></li>
                     </ul>
                 </nav>
+                <div class="main" ui-view> <!--se despliega el contenido del routing-->
+
+                </div>
             </div>
         </div>
-        <div class="main">
-            <ng-view></ng-view>
-        </div>
+
         <footer id="footer"></footer>
     </body>
