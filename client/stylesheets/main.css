@@ -303,7 +303,7 @@ li{
 
 #footer .holder li{
     display: inline;
-    background: url("/img/rayita.png") no-repeat 0 1px 0 5px;
+    background: url("/img/rayita.png") no-repeat 0 1px;
     padding: 0 1px 0 5px;
 }
 
