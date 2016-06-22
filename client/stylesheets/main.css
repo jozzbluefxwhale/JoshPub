@@ -1,4 +1,4 @@
-header, footer, article, section, nav,figure, div, form{
+header, footer, article, section, nav,figure, div, form, p{
     display: block;
 }
 
@@ -11,6 +11,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     padding: 0;
     outline: none;
 }
+
+h1, h2, h3, h4, h5{
+    font-weight:normal;
+}
+
 body{
     height:100%;
 }
@@ -55,7 +60,7 @@ li{
 
 #header{
     width: 100%;
-    position: relative;
+        position: relative;
     height: 104px;
     background: #795548;
     color:#fff;
@@ -323,4 +328,24 @@ li{
 .footnav{
     float: right;
     margin: 0 -1px 0 0 ;
+}
+/****************************************AcercaD********************************************/
+
+.aboutshit-holder h4 {
+    border-bottom: 1px solid #ECECEC;
+    font-family: ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-bottom: 27px;
+    padding-bottom: 10px;
+}
+.aboutshit-holder h5 {
+    font-family: ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.aboutshit-holder > p {
+    color: #8C8C8C;
+    font: 14px/20px ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
+    margin-bottom: 36px;
 }
