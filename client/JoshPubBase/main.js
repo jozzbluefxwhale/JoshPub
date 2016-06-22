@@ -30,7 +30,7 @@ app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
           })
           .state('JoshPubSuggest',{
               url:'/suggest',
-              templateUrl: "client/JoshPubSuggest/JoshPubSuggest.html"
+              templateUrl: "client/JoshPubSuggest/suggest.html"
               //controller: 'suggestCtrl'
          })
           .state('contact',{
@@ -43,7 +43,7 @@ app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
               templateUrl: "client/JoshPubPlus/faq.html"
           })
           .state('aboutUs',{
-              url:'/',
+              url:'/aboutUs',
               templateUrl: "client/JoshPubPlus/about.html"
           })
           .state('terms',{

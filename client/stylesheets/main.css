@@ -1,6 +1,11 @@
 header, footer, article, section, nav,figure, div, form{
     display: block;
 }
+
+ul{
+    display: block;
+    list-style-type: disc;
+}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, select, p, blockquote, th, td {
     margin: 0;
     padding: 0;
@@ -21,6 +26,7 @@ input, textarea,keygen, select,button{
 }
 
 a{
+    text-decoration: none !important;
     color:#5D4037;
     outline:none;
 }
@@ -246,7 +252,9 @@ li{
 #main{
     width: 941px;
     margin:0 auto;
-    padding:24px 0 30px;
+    padding:50px 0 30px;
+    border-bottom:1px solid #e8e8e8;
+
 }
 .threecolumns{
     width: 100%;
@@ -277,9 +285,42 @@ li{
     overflow: hidden;
     width: 871px;
     padding: 19px 69px 0 0;
-    font-size: 11px;
+    font-size: 15px;
     margin: -92px auto 0;
     height: 72px;
     border-top: 1px solid #d6d6d6;
-    background-color: brown;
+}
+
+#footer .holder{
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+#footer .holder li{
+    display: inline;
+    background: url("/img/rayita.png") no-repeat 0 1px 0 5px;
+    padding: 0 1px 0 5px;
+}
+
+ a:hover{
+    color: #EF6C00;
+}
+ a:active{
+     color:#EF6C00;
+ }
+
+
+#footer li:first-child {
+    background: none;
+}
+
+.by{
+    float: right;
+    font-size: 12px;
+    color:#424242;
+}
+
+.footnav{
+    float: right;
+    margin: 0 -1px 0 0 ;
 }

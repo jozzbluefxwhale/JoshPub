@@ -37,15 +37,26 @@
                 <nav id="nav" ng-controller="navbarCtrl as navbar">
                     <ul class="navigation">
                         <li ng-class="{ active : isActive('/index')}"><a href="/index">Inicio</a></li>
-                        <li ng-class="{active :isActive('/busqueda')}"><a href="/busqueda">Busqueda Avanzada</a></li>
+                        <li ng-class="{active :isActive('/busqueda')}"><a href="/busqueda"> Busqueda Avanzada</a></li>
                         <li ng-class="{active :isActive('/rack')}"><a href="/rack">JoshPubRack</a></li>
                     </ul>
                 </nav>
-                <div class="main" ui-view> <!--se despliega el contenido del routing-->
+                <div id="main" ui-view> <!--se despliega elq contenido del routing-->
 
                 </div>
             </div>
         </div>
 
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="holder">
+                <ul class="footnav">
+                    <li ng-class="{ active: isActive('/contact')}"><a href="/contact">Contactenos</a> </li>
+                    <li ng-class="{ active: isActive('/aboutUs')}"><a href="/aboutUs">| Acerca de Nosotros</a> </li>
+                    <li ng-class="{ active: isActive('/FAQ')}"><a href="/FAQ">| Preguntas Frecuentes</a> </li>
+                    <li ng-class="{ active: isActive('/JoshPubSuggest')}"><a href="/suggest">| Agrega una bebida</a> </li>
+                    <li ng-class="{ active: isActive('/terms')}"><a href="/terms">| Terminos y Condiciones</a> </li>
+                </ul>
+            </div>
+            <p class="by"> ©BluefxkWhale. </p>
+        </footer>
     </body>
