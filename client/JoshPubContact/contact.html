@@ -1,0 +1,26 @@
+<div id="contact-shit">
+    <form name="frmContacto" ng-submit="mailto();" id="frm-contacto" class="jpFormulario" novalidate>
+            <h4>Ponte en contacto con JoshPubs</h4>
+
+            <p>Si tienes consultas, comentarios, sugerencias o deseas conversar con JoshPub escribenos por medio de este formulario y te contestaremos lo mas pronto posible.</p>
+            <ul>
+                <li>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" autocomplete="off" name="nombre" ng-model="user.name" required/>
+                    <span ng-show="frmContacto.nombre.$dirty && frmContacto.nombre.$error.required"> Ingrese un nombre</span>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="text" autocomplete="off" name="email" ng-model="user.email" required/>
+                    <span ng-show ="frmContacto.email.$dirty && frmContacto.nombre.$error.required">Ingrese un email</span>
+                </li>
+
+                <li class>
+                    <label for="comentarios">Comentarios</label>
+                    <textarea cols="60" rows="6" name="comentario" ng-model="user.comment" required></textarea>
+                    <span ng-show ="frmContacto.descripcion.$dirty && frmContacto.nombre.$error.required">Ingrese un email</span>
+                </li>
+
+            </ul>
+    </form>
+</div>

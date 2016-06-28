@@ -3,11 +3,11 @@
         <title>JoshPub</title>
     <base href="/">
     </head>
-    <body ng-app="joshpubApp">
-        <div class="wrapper">
-            <div class="w1">
+    <body ng-app="joshpubApp" ng-controller="mainCtrl">
+        <div class="jpContenedorFull">
+            <div class="jpContenedor">
                 <!-- cabecera-->
-                <div id="header">
+                <div id="jpHeadFull">
                     <span class="line"></span>
                     <div class="header-holder">
                         <img src="/img/logo.png" class="logo">
@@ -15,7 +15,7 @@
                             <!-- columna 1-->
                             <div class="col01">
                                 <div class="header-block">
-                                    <a href="#" class="link">+ AGREGAR PRODUCTO</a>
+                                    <a href="/suggest" class="link">+ AGREGAR PRODUCTO</a>
                                 </div>
                                 <div class="search-block">
                                     <form  method="get">
@@ -51,10 +51,10 @@
             <div class="holder">
                 <ul class="footnav">
                     <li ng-class="{ active: isActive('/contact')}"><a href="/contact">Contactenos</a> </li>
-                    <li ng-class="{ active: isActive('/aboutUs')}"><a href="/aboutUs">| Acerca de Nosotros</a> </li>
+                    <li ng-class="{ active: isActive('/about')}"><a href="/about">| Acerca de Nosotros</a> </li>
                     <li ng-class="{ active: isActive('/FAQ')}"><a href="/FAQ">| Preguntas Frecuentes</a> </li>
                     <li ng-class="{ active: isActive('/JoshPubSuggest')}"><a href="/suggest">| Agrega una bebida</a> </li>
-                    <li ng-class="{ active: isActive('/terms')}"><a href="/terms">| Terminos y Condiciones</a> </li>
+                    <li ng-class="{ active: isActive('/credits')}"><a href="/credits">|Creditos</a> </li>
                 </ul>
             </div>
             <p class="by"> ©BluefxkWhale. </p>

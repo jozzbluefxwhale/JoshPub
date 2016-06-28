@@ -6,6 +6,8 @@ import uiRouter from 'angular-ui-router';
 // aqui se establecen las dependencias de JoshPubbApp.
 var app =angular.module('joshpubApp',['angular-meteor', 'ui.router','angular-templates']);
 
+//
+
 // creamos el router
 
 app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
@@ -25,32 +27,38 @@ app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
           })
           .state('rack',{
               url:'/rack',
-              templateUrl: "client/JoshPubRack/rack.html"
+              templateUrl: "client/JoshPubRack/rack.html",
+              data : { pageTitle: '' }
               //controller: 'rackCtrl'
           })
           .state('JoshPubSuggest',{
+              name:'Sugiere :: JoshPub',
               url:'/suggest',
-              templateUrl: "client/JoshPubSuggest/suggest.html"
+              templateUrl: "client/JoshPubSuggest/suggest.html",
+              data : { pageTitle: 'Suggest :: JoshPub' }
               //controller: 'suggestCtrl'
          })
           .state('contact',{
               url:'/contact',
-              templateUrl: "client/JoshPubPlus/contact.html",
+              templateUrl: "client/JoshPubContact/contact.html",
+              data : { pageTitle: 'Contacto :: JoshPub' }
               //controller: 'contactCtrl'
           })
           .state('faq',{
               url:'/FAQ',
-              templateUrl: "client/JoshPubPlus/faq.html"
+              templateUrl: "client/JoshPubPlus/faq.html",
+              data : { pageTitle: 'Faq :: JoshPub' }
           })
-          .state('aboutUs',{
-              url:'/aboutUs',
-              templateUrl: "client/JoshPubPlus/about.html"
+          .state('about',{
+              url:'/about',
+              templateUrl: "client/JoshPubPlus/about.html",
+              data : { pageTitle: 'Acerca De :: JoshPub' }
           })
-          .state('terms',{
-              url:'/terms',
-              templateUrl: "client/JoshPubPlus/terms.html"
+          .state('credits',{
+              url:'/credits',
+              templateUrl: "client/JoshPubPlus/credits.html",
+              data : { pageTitle: 'Credits :: JoshPub' }
           });
-     $urlRouterProvider.otherwise("./gate.html")
 
   }]);
 
@@ -62,3 +70,23 @@ function navbarCtrl($scope, $location)
             return $location.path().indexOf(viewLocation) == 0;
         }}
 );
+
+app.controller('mainCtrl', function($scope) {
+    $scope.user= {
+        nombre: '',
+        email: '',
+        coment: ''
+    };
+
+    $scope.registered = false;
+
+
+    $scope.send = function(){
+        $scope.registered = false;
+        // Si no es valido no procede.
+        if($scope.frmRegister.$invalid)
+            return false;
+
+        $scope.registered = true;
+    }
+});

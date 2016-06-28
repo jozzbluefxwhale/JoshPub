@@ -16,9 +16,18 @@ h1, h2, h3, h4, h5{
     font-weight:normal;
 }
 
-body{
-    height:100%;
+body {
+    height: 100%;
+    color: #303030;
+    font: 14px/17px ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
+    min-width: 1000px;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
 }
+
 input, textarea,keygen, select,button{
     text-rendering: auto;
     letter-spacing: normal;
@@ -38,14 +47,14 @@ a{
 li{
     list-style:none;
 }
-.wrapper{
+.jpContenedorFull{
     overflow:auto;
      min-height: 100%;
     width: 100%;
     position: relative;
 }
 
-.w1{
+.jpContenedor{
     width: 100%;
     overflow: hidden;
     padding-bottom: 92px;
@@ -58,7 +67,7 @@ li{
     max-width: 62px;
 }
 
-#header{
+#jpHeadFull{
     width: 100%;
         position: relative;
     height: 104px;
@@ -69,7 +78,7 @@ li{
 
 }
 
-#header .line{
+#jpHeadFull .line{
     position: absolute;
     left:0;
     right:0;
@@ -78,11 +87,11 @@ li{
     background: #5D4037;
 }
 
-#header .header-holder{
+#jpHeadFull .header-holder{
     width: 941px;
     margin: auto;
 }
-#header .frame {
+#jpHeadFull .frame {
     float:right;
     width:705px;
 }
@@ -103,11 +112,11 @@ li{
     background: url("");
 }
 
-#header .col01 {
+#jpHeadFull .col01 {
     float: left;
     width: 472px;
 }
-#header .col02 {
+#jpHeadFull .col02 {
     float: right;
     width: 225px;
 }
@@ -331,21 +340,100 @@ li{
 }
 /****************************************AcercaD********************************************/
 
-.aboutshit-holder h4 {
+.jpAboutShit-holder h4 {
     border-bottom: 1px solid #ECECEC;
     font-family: ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
     font-size: 22px;
     margin-bottom: 27px;
     padding-bottom: 10px;
 }
-.aboutshit-holder h5 {
+.jpAboutShit-holder h5 {
     font-family: ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.aboutshit-holder > p {
+.jpAboutShit-holder > p {
     color: #8C8C8C;
     font: 14px/20px ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
     margin-bottom: 36px;
 }
+
+/**********************************Contacto*******************************************************/
+
+#frm-contacto {
+    width: 700px;
+}
+#frm-contacto h4 {
+    margin-bottom: 16px;
+}
+
+#frm-contacto p {
+    color: #9b9b9b;
+    margin-bottom: 9px;
+    line-height: 20px;
+}
+
+.jpFormulario h4 {
+    font-family: ProximaNovaRgRegular, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    border-bottom: 1px solid #ececec;
+    width: 700px;
+    padding-bottom: 10px;
+    margin-bottom: 27px;
+}
+
+#frm-contacto .comments textarea {
+    width: 542px;
+    height: 156px;
+    margin-bottom: 8px;
+}
+
+.jpFormulario textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25) inset;
+    font: 14px/16px ProximaNovaRgRegular,Arial,Helvetica,sans-serif;
+    padding: 5px 8px;
+    width: 243px;
+}
+
+.jpFormulario li {
+    margin-bottom: 10px;
+    }
+.error-form .msg_field {
+    display: block;
+    margin: 3px 0;
+    min-height: 20px;
+}
+
+.jpFormulario input[type="text"]{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25) inset;
+    font: 14px/16px ProximaNovaRgRegular,Arial,Helvetica,sans-serif;
+    padding: 3px 8px;
+    width: 243px;
+    height: 23px;
+}
+
+.jpFormulario input[type="password"], .jpFormulario input[type="email"] {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25) inset;
+    font: 14px/16px ProximaNovaRgRegular,Arial,Helvetica,sans-serif;
+    padding: 3px 8px;
+    width: 243px;
+    height: 23px;
+}
+.jpFormulario label {
+    font-size: 14px;
+    font-family: ProximaNovaRgBold,Arial,Helvetica,sans-serif;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/*******************************************************************************************************************************/
