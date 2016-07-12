@@ -4,22 +4,23 @@ import uiRouter from 'angular-ui-router';
 
 
 // aqui se establecen las dependencias de JoshPubbApp.
-var app =angular.module('joshpubApp',['angular-meteor', 'ui.router','angular-templates']);
+angular.module('joshpubApp', [
+        'angular-meteor',
+        'ui.router',
+        'angular-templates'
+]);
 
-//
 
-// creamos el router
-
-app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
+angular.module('joshpubApp',['angular-meteor', 'ui.router','angular-templates']).config(['$stateProvider','$locationProvider','$urlRouterProvider',
    function($stateProvider,$locationProvider,$urlRouterProvider){
       $locationProvider.html5Mode(true); // formato del url que se muestra en la barra del navegador.
 
       $stateProvider
-      .state('index',{
-          url:'/index',
-          templateUrl: "client/JoshPubIndex/index.html"
-          //controller: 'mainCtrl'
-      })
+          .state('index',{
+            url:'/index',
+            templateUrl: "client/JoshPubIndex/index.html"
+            //controller: 'mainCtrl'
+          })
           .state('busqueda',{
               url:'/busqueda',
               templateUrl: "client/JoshPubSearch/search.html"
@@ -35,8 +36,8 @@ app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
               name:'Sugiere :: JoshPub',
               url:'/suggest',
               templateUrl: "client/JoshPubSuggest/suggest.html",
-              data : { pageTitle: 'Suggest :: JoshPub' }
-              //controller: 'suggestCtrl'
+              data : { pageTitle: 'Suggest :: JoshPub' },
+              controller: 'suggestCtrl'
          })
           .state('contact',{
               url:'/contact',
@@ -59,34 +60,5 @@ app.config(['$stateProvider','$locationProvider','$urlRouterProvider',
               templateUrl: "client/JoshPubPlus/credits.html",
               data : { pageTitle: 'Credits :: JoshPub' }
           });
-
   }]);
 
-
-app.controller('navbarCtrl',
-function navbarCtrl($scope, $location)
-    {
-        $scope.isActive = function (viewLocation) {
-            return $location.path().indexOf(viewLocation) == 0;
-        }}
-);
-
-app.controller('mainCtrl', function($scope) {
-    $scope.user= {
-        nombre: '',
-        email: '',
-        coment: ''
-    };
-
-    $scope.registered = false;
-
-
-    $scope.send = function(){
-        $scope.registered = false;
-        // Si no es valido no procede.
-        if($scope.frmRegister.$invalid)
-            return false;
-
-        $scope.registered = true;
-    }
-});

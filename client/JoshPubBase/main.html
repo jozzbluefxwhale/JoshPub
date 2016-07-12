@@ -3,7 +3,7 @@
         <title>JoshPub</title>
     <base href="/">
     </head>
-    <body ng-app="joshpubApp" ng-controller="mainCtrl">
+    <body ng-app="joshpubApp">
         <div class="jpContenedorFull">
             <div class="jpContenedor">
                 <!-- cabecera-->
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <!--nav-->
-                <nav id="nav" ng-controller="navbarCtrl as navbar">
+                <nav id="nav">
                     <ul class="navigation">
                         <li ng-class="{ active : isActive('/index')}"><a href="/index">Inicio</a></li>
                         <li ng-class="{active :isActive('/busqueda')}"><a href="/busqueda"> Busqueda Avanzada</a></li>

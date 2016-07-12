@@ -1,1 +1,31 @@
-<h1>SUGGEST</h1>
+<div id="suggest-shit" ng-controller="suggestCtrl">
+    <form name="frmSuggest" disable-btn ng-submit="insert()" id="frm-contacto" class="jpFormulario" novalidate>
+        <h4>Sugiere una bebida a JoshPubs</h4>
+
+        <p>Si tienes sugerencias sobre alguna bebida que quieras compartir con JoshPub mandala por medio de este formulario y quien sabe podria aparecer en nuestra pagina.</p>
+        <ul>
+            <li>
+                <label for="nombre">Nombre de la Bebida</label>
+                <input type="text" autocomplete="off" name="nombre" ng-model="waro.name" required/>
+            </li>
+            <li>
+                <label for="Tipo">Tipo</label>
+                <select ng-model="waro_type" ng-options="waro for waro in types">
+                    <option value="">Tipo de Alcohol</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="Precio">Precio</label>
+                <input type="text" autocomplete="off" name="precio" ng-model="price.waro" required/>
+            </li>
+
+            <li>
+                <label for="Descripcion">Descripcion</label>
+                <textarea cols="200" rows="8" name="comentario" ng-model="waro.description" required></textarea>
+            </li>
+
+        </ul>
+        <button type="submit" class="btn-form">Enviar</button>
+    </form>
+</div>
